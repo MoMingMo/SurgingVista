@@ -84,7 +84,7 @@ namespace Surging.ApiGateway
                 option.AddCache();
                 //option.UseZooKeeperManager(new ConfigInfo("127.0.0.1:2181"));
                 if (registerConfig.Provider == RegisterProvider.Consul)
-                    option.UseConsulManager(new ConfigInfo(registerConfig.Address, enableChildrenMonitor: false));
+                    option.UseConsulManager(new ConfigInfo("127.0.0.1:8500", enableChildrenMonitor: false));
                 else if (registerConfig.Provider == RegisterProvider.Zookeeper)
                     option.UseZooKeeperManager(new ZookeeperConfigInfo(registerConfig.Address, enableChildrenMonitor: true));
                 option.UseDotNettyTransport();

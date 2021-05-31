@@ -38,7 +38,7 @@ namespace Surging.Services.Server
                         option.AddServiceRuntime()
                         .AddRelateService()
                         .AddConfigurationWatch()
-                        //option.UseZooKeeperManager(new ConfigInfo("127.0.0.1:2181")); 
+                        .UseConsulManager(new Core.Consul.Configurations.ConfigInfo("127.0.0.1:8500")) 
                         .AddServiceEngine(typeof(SurgingServiceEngine));
                         builder.Register(p => new CPlatformContainer(ServiceLocator.Current));
                     });

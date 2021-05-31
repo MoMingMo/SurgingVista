@@ -103,6 +103,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties surgingsettings_1json__JsonSchema="..ElasticsearchJsonFormatter" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

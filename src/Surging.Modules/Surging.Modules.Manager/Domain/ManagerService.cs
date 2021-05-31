@@ -21,7 +21,7 @@ namespace Surging.Modules.Manager.Domain
             //GetService<IUserService>("User").GetUserId("fanly");
             Dictionary<string, object> model = new Dictionary<string, object>();
             model.Add("name", name);
-            string path = "api/hello/say"; 
+            string path = "api/manager/say"; 
 
             string result =await _serviceProxyProvider.Invoke<string>(model, path, null);
             return result;
